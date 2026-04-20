@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoscoop | 결제 정보 입력</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html" aria-label="Zoscoop 홈">
+        <img src="./logo.png" alt="Zoscoop logo">
+      </a>
+      <nav aria-label="메인 내비게이션">
+        <ul class="nav-links">
+          <li><a href="./index.html">홈</a></li>
+          <li><a href="./product.html">상품</a></li>
+          <li><a class="active" href="./checkout.html">결제</a></li>
+          <li><a href="./contact.html">문의하기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container checkout-layout">
+      <section class="content-card">
+        <h1>결제 정보 입력</h1>
+        <p class="intro">아래 정보를 입력한 후 PayPal 버튼으로 결제를 진행해 주세요.</p>
+        <form class="checkout-form" id="checkoutForm">
+          <label for="fullName">이름</label>
+          <input id="fullName" name="fullName" type="text" required placeholder="홍길동">
+
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" required placeholder="example@email.com">
+
+          <label for="phone">휴대폰 번호</label>
+          <input id="phone" name="phone" type="tel" required placeholder="010-1234-5678">
+
+          <label for="address">주소</label>
+          <input id="address" name="address" type="text" required placeholder="도로명/상세주소 입력">
+
+          <label for="pccc">PCCC (개인통관고유부호)</label>
+          <input id="pccc" name="pccc" type="text" required placeholder="P123456789012">
+        </form>
+      </section>
+
+      <aside class="content-card">
+        <h2>주문 요약</h2>
+        <p><strong>상품:</strong> <span id="orderBundle">1 스쿱 + 무료 선물 2개</span></p>
+        <p><strong>결제 금액:</strong> $<span id="orderPrice">35.99</span></p>
+        <div class="paypal-badge" aria-label="PayPal secure payment">
+          <img class="paypal-icon" src="./paypal-transparent-paypal-free-free-png.webp" alt="PayPal">
+          <small>안전 결제</small>
+        </div>
+        <p id="paypalStatus" class="secure-note"></p>
+        <div id="paypal-button-container"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>안내</h3>
+        <ul>
+          <li><a href="./terms.html">이용약관</a></li>
+          <li><a href="./privacy.html">개인정보처리방침</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>고객센터</h3>
+        <ul>
+          <li><a href="./shipping.html">배송 정책</a></li>
+          <li><a href="./returns.html">교환/환불 정책</a></li>
+          <li><a href="./payment-tax.html">결제 및 세금</a></li>
+          <li><a href="./track-order.html">주문 조회</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>문의하기</h3>
+        <p><a href="mailto:info@zoscoop.com">info@zoscoop.com</a></p>
+      </section>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

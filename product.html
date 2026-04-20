@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoscoop | 상품</title>
+  <meta name="description" content="Zoscoop 문구 & 큐티 럭키 스쿱 상품 페이지">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html" aria-label="Zoscoop 홈">
+        <img src="./logo.png" alt="Zoscoop logo">
+      </a>
+      <nav aria-label="메인 내비게이션">
+        <ul class="nav-links">
+          <li><a href="./index.html">홈</a></li>
+          <li><a class="active" href="./product.html">상품</a></li>
+          <li><a href="./contact.html">문의하기</a></li>
+          <li><a href="./about.html">회사 소개</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Zoscoop Stationery & Cutie lucky scoop</h1>
+        <div class="product-layout">
+          <div class="product-gallery" aria-label="상품 이미지 갤러리">
+            <div class="gallery-track">
+              <img src="./logo.png" alt="Zoscoop product display 1">
+              <img src="./logo.png" alt="Zoscoop product display 2">
+              <img src="./logo.png" alt="Zoscoop product display 3">
+            </div>
+          </div>
+          <div class="product-panel">
+            <p class="intro">런칭 특가로 판매 중입니다. 취소선 가격은 정가입니다.</p>
+            <div class="options">
+              <label class="option">
+                <input type="radio" name="bundle" checked data-price="35.99">
+                <span class="option-main">1 스쿱 + 무료 선물 2개</span>
+                <span class="price-wrap"><s>$49.99</s><strong>$35.99</strong></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="bundle" data-price="71.98">
+                <span class="option-main">2 스쿱 + 무료 선물 3개</span>
+                <span class="price-wrap"><s>$99.98</s><strong>$71.98</strong></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="bundle" data-price="107.97">
+                <span class="option-main">3 스쿱 + 무료 선물 3개</span>
+                <span class="price-wrap"><s>$149.97</s><strong>$107.97</strong></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="bundle" data-price="143.96">
+                <span class="option-main">4 스쿱 + 무료 선물 4개</span>
+                <span class="price-wrap"><s>$199.96</s><strong>$143.96</strong></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="bundle" data-price="179.95">
+                <span class="option-main">5 스쿱 + 무료 선물 5개</span>
+                <span class="price-wrap"><s>$249.95</s><strong>$179.95</strong></span>
+              </label>
+              <label class="option">
+                <input type="radio" name="bundle" data-price="215.94">
+                <span class="option-main">6 스쿱 + 무료 선물 6개</span>
+                <span class="price-wrap"><s>$299.94</s><strong>$215.94</strong></span>
+              </label>
+            </div>
+            <div class="cta-row">
+              <button id="addToCartBtn" class="btn btn-primary" type="button">장바구니 담기</button>
+              <button id="buyNowBtn" class="btn btn-buy" type="button">바로 구매</button>
+            </div>
+            <div class="paypal-badge" aria-label="PayPal secure payment">
+              <img class="paypal-icon" src="./paypal-transparent-paypal-free-free-png.webp" alt="PayPal">
+              <small>안전 결제</small>
+            </div>
+            <p id="paypalStatus" class="secure-note"></p>
+            <div id="paypal-button-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews">
+      <div class="container">
+        <h2 class="section-title">고객 리뷰</h2>
+        <div class="review-grid">
+          <article class="review-card">
+            <h3>윤**이 <small>2026/04/15</small></h3>
+            <p>재주문🩷 이번에도 다양하고 풍성한 박스!! 너무너무 만족해요🫶🏻 기다린만큼 보람있어요☺️</p>
+          </article>
+          <article class="review-card">
+            <h3>윤**윤 <small>2026/04/07</small></h3>
+            <p>저는 3스쿱을 주문하였고 3월 18일에 주문해서 3월 28일에 받았으니 약 10일 정도 걸린 것 같아요. 다른 마켓에서도 스쿱 상품을 주문해본 적이 있는데 배송은 조금 걸리는 편이지만 여기 퀄리티가 제일 좋은 것 같아요. 양도 정말 많아요!!</p>
+            <p>다음번에는 다른 캐릭터로 다시 주문해보려고 해요. 이메일로 문의드려도 답변도 빠른 편이라 좋았습니다!!</p>
+            <p>해외 주문이라 처음에는 조금 불안했지만, 결과적으로 너무 만족스러웠어요.</p>
+          </article>
+          <article class="review-card">
+            <h3>J**E <small>2026/04/03</small></h3>
+            <p>저와 같은 한국 분들의 구매에 도움이 되었으면 해서 리뷰 남깁니다!</p>
+            <p>일단 저는 3 Scoops + 3 Free Gifts 옵션으로 주문했습니다. 궁금한 점을 이메일로 문의드리면 자세하게 안내해 주셨고, 영어로 문의드렸는데도 응답이 친절하고 빠른 편이었습니다.</p>
+            <p>3월 4일에 주문해서 3월 17일에 받았고, 특정 캐릭터를 따로 요청하진 않았습니다. 하지만 사진에서 보시는 것처럼 실용적이고 꼭 필요한 아이템들과 귀엽고 다양한 제품들이 정말 많이 들어 있어서, 기다린 시간만큼 충분히 만족하고 있습니다! 잘 사용하겠습니다 🙂</p>
+          </article>
+        </div>
+        <form class="review-form">
+          <label for="reviewText">리뷰 작성</label>
+          <textarea id="reviewText" placeholder="구매 후기를 남겨주세요..."></textarea>
+          <button class="btn btn-secondary" type="button">리뷰 등록</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>안내</h3>
+        <ul>
+          <li><a href="./terms.html">이용약관</a></li>
+          <li><a href="./privacy.html">개인정보처리방침</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>고객센터</h3>
+        <ul>
+          <li><a href="./shipping.html">배송 정책</a></li>
+          <li><a href="./returns.html">교환/환불 정책</a></li>
+          <li><a href="./payment-tax.html">결제 및 세금</a></li>
+          <li><a href="./track-order.html">주문 조회</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>문의하기</h3>
+        <p><a href="mailto:info@zoscoop.com">info@zoscoop.com</a></p>
+      </section>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" aria-label="모바일 고정 액션 버튼">
+    <button class="btn btn-primary" type="button">장바구니 담기</button>
+    <button class="btn btn-buy" type="button">바로 구매</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
