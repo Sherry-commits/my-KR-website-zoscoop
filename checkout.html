@@ -39,11 +39,40 @@
           <label for="phone">휴대폰 번호</label>
           <input id="phone" name="phone" type="tel" required placeholder="010-1234-5678">
 
-          <label for="address">주소</label>
-          <input id="address" name="address" type="text" required placeholder="도로명/상세주소 입력">
+          <label for="country">국가/지역</label>
+          <select id="country" name="country" required>
+            <option value="KR" selected>대한민국</option>
+            <option value="US">United States</option>
+            <option value="JP">Japan</option>
+            <option value="CN">China</option>
+            <option value="OTHER">Other</option>
+          </select>
+
+          <div class="form-row">
+            <div>
+              <label for="postalCode">우편번호</label>
+              <input id="postalCode" name="postalCode" type="text" required placeholder="06236">
+            </div>
+            <div>
+              <label for="province">시/도</label>
+              <input id="province" name="province" type="text" required placeholder="서울특별시">
+            </div>
+          </div>
+
+          <label for="city">시/군/구</label>
+          <input id="city" name="city" type="text" required placeholder="강남구">
+
+          <label for="address1">주소 1 (도로명/건물명)</label>
+          <input id="address1" name="address1" type="text" required placeholder="테헤란로 123">
+
+          <label for="address2">주소 2 (상세 주소, 선택)</label>
+          <input id="address2" name="address2" type="text" placeholder="101동 1001호">
 
           <label for="pccc">PCCC (개인통관고유부호)</label>
           <input id="pccc" name="pccc" type="text" required placeholder="P123456789012">
+
+          <label for="checkoutOrderNote">주문 메모 (선택)</label>
+          <textarea id="checkoutOrderNote" name="checkoutOrderNote" placeholder="요청사항을 입력해 주세요."></textarea>
         </form>
       </section>
 
@@ -51,6 +80,7 @@
         <h2>주문 요약</h2>
         <p><strong>상품:</strong> <span id="orderBundle">1 스쿱 + 무료 선물 2개</span></p>
         <p><strong>결제 금액:</strong> $<span id="orderPrice">35.99</span></p>
+        <p><strong>메모:</strong> <span id="orderNoteSummary">없음</span></p>
         <div class="paypal-badge" aria-label="PayPal secure payment">
           <img class="paypal-icon" src="./paypal-transparent-paypal-free-free-png.webp" alt="PayPal">
           <small>안전 결제</small>

@@ -7,6 +7,9 @@ const addToCartBtn = document.getElementById("addToCartBtn");
 const checkoutForm = document.getElementById("checkoutForm");
 const orderBundle = document.getElementById("orderBundle");
 const orderPrice = document.getElementById("orderPrice");
+const productOrderNote = document.getElementById("productOrderNote");
+const checkoutOrderNote = document.getElementById("checkoutOrderNote");
+const orderNoteSummary = document.getElementById("orderNoteSummary");
 
 function syncActiveOption() {
   optionLabels.forEach((label) => label.classList.remove("active"));
@@ -31,6 +34,10 @@ function getSelectedPrice() {
 function getSelectedBundleName() {
   const selected = document.querySelector('input[name="bundle"]:checked');
   return selected?.closest(".option")?.querySelector(".option-main")?.textContent?.trim() || "1 스쿱 + 무료 선물 2개";
+}
+
+function getProductOrderNote() {
+  return productOrderNote?.value?.trim() || "";
 }
 
 function setStatus(message) {
@@ -132,6 +139,7 @@ if (buyNowBtn) {
     const params = new URLSearchParams({
       bundle: getSelectedBundleName(),
       price: getSelectedPrice(),
+      note: getProductOrderNote(),
     });
     window.location.href = `./checkout.html?${params.toString()}`;
   });
@@ -142,6 +150,7 @@ if (addToCartBtn) {
     const params = new URLSearchParams({
       bundle: getSelectedBundleName(),
       price: getSelectedPrice(),
+      note: getProductOrderNote(),
     });
     window.location.href = `./checkout.html?${params.toString()}`;
   });
@@ -154,12 +163,30 @@ function hydrateCheckoutSummaryFromQuery() {
   const query = new URLSearchParams(window.location.search);
   const bundle = query.get("bundle");
   const price = query.get("price");
+  const note = query.get("note");
   if (bundle) {
     orderBundle.textContent = bundle;
   }
   if (price) {
     orderPrice.textContent = price;
   }
+  if (typeof note === "string" && note.trim()) {
+    if (checkoutOrderNote) {
+      checkoutOrderNote.value = note;
+    }
+    if (orderNoteSummary) {
+      orderNoteSummary.textContent = note;
+    }
+  } else if (orderNoteSummary) {
+    orderNoteSummary.textContent = "없음";
+  }
+}
+
+if (checkoutOrderNote && orderNoteSummary) {
+  checkoutOrderNote.addEventListener("input", () => {
+    const noteValue = checkoutOrderNote.value.trim();
+    orderNoteSummary.textContent = noteValue || "없음";
+  });
 }
 
 hydrateCheckoutSummaryFromQuery();
