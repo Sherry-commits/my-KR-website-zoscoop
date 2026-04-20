@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap");
+
 :root {
   --bg: #fff8fb;
   --card: #ffffff;
@@ -17,7 +19,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   scroll-behavior: smooth;
@@ -55,7 +57,7 @@ a {
 }
 
 .brand img {
-  width: 150px;
+  width: 126px;
   height: auto;
 }
 
@@ -103,6 +105,11 @@ h1 {
   margin: 14px 0 8px;
   font-size: clamp(28px, 4vw, 42px);
   line-height: 1.15;
+  font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Roboto", sans-serif;
 }
 
 .hero-text {
@@ -382,6 +389,74 @@ h1 {
   gap: 16px;
 }
 
+.checkout-shell {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 0;
+  border: 1px solid #e8e0e8;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.checkout-main {
+  padding: 26px;
+  border-right: 1px solid #ebe4eb;
+}
+
+.checkout-summary {
+  background: #faf7fb;
+  padding: 26px;
+}
+
+.summary-card {
+  border: 1px solid #eee5ef;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.summary-card h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.summary-card p {
+  margin: 8px 0;
+}
+
+.checkout-title {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.checkout-block {
+  border: 1px solid #ece5ed;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+}
+
+.checkout-block + .checkout-block {
+  margin-top: 14px;
+}
+
+.checkout-block h2 {
+  margin: 4px 0 10px;
+  font-size: 30px;
+}
+
+.checkout-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout-divider {
+  margin: 10px 0 6px;
+  border-top: 1px solid #eee7ee;
+}
+
 .checkout-form {
   display: grid;
   gap: 8px;
@@ -390,6 +465,14 @@ h1 {
 .checkout-form label {
   font-weight: 600;
   font-size: 14px;
+}
+
+.inline-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #5b5662;
 }
 
 .checkout-form input {
@@ -411,6 +494,29 @@ h1 {
 .checkout-form textarea {
   min-height: 90px;
   resize: vertical;
+}
+
+.paypal-left .paypal-badge {
+  margin-top: 0;
+}
+
+.paypal-left #paypal-button-container {
+  min-height: 44px;
+}
+
+.paypal-checkout-brand {
+  width: 320px;
+  height: 92px;
+  margin-bottom: 8px;
+  background-image: url("./paypal.png?v=2");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+#paypal-card-button-container {
+  margin-top: 10px;
+  min-height: 44px;
 }
 
 .form-row {
@@ -488,8 +594,14 @@ h1 {
   .review-grid,
   .footer-grid,
   .checkout-layout,
+  .checkout-shell,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .checkout-main {
+    border-right: 0;
+    border-bottom: 1px solid #ebe4eb;
   }
 }
 
