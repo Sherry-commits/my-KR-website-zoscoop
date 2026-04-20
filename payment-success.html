@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoscoop | 결제 완료</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html" aria-label="Zoscoop 홈">
+        <img src="./logo.png" alt="Zoscoop logo">
+      </a>
+      <nav aria-label="메인 내비게이션">
+        <ul class="nav-links">
+          <li><a href="./index.html">홈</a></li>
+          <li><a href="./product.html">상품</a></li>
+          <li><a href="./contact.html">문의하기</a></li>
+          <li><a href="./about.html">회사 소개</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container content-card">
+      <h1>결제가 완료되었습니다</h1>
+      <p>주문해 주셔서 감사합니다. 결제가 정상적으로 처리되었습니다.</p>
+      <p><strong>주문 번호:</strong> <span id="orderId">확인 중...</span></p>
+      <p><strong>결제 번호:</strong> <span id="captureId">확인 중...</span></p>
+      <p><strong>결제 금액:</strong> $<span id="amount">-</span></p>
+      <div class="hero-cta">
+        <a href="./track-order.html" class="btn btn-primary">주문 조회 안내 보기</a>
+        <a href="./product.html" class="btn btn-secondary">상품 페이지로 돌아가기</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3>안내</h3>
+        <ul>
+          <li><a href="./terms.html">이용약관</a></li>
+          <li><a href="./privacy.html">개인정보처리방침</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>고객센터</h3>
+        <ul>
+          <li><a href="./shipping.html">배송 정책</a></li>
+          <li><a href="./returns.html">교환/환불 정책</a></li>
+          <li><a href="./payment-tax.html">결제 및 세금</a></li>
+          <li><a href="./track-order.html">주문 조회</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>문의하기</h3>
+        <p><a href="mailto:info@zoscoop.com">info@zoscoop.com</a></p>
+      </section>
+    </div>
+  </footer>
+
+  <script>
+    const q = new URLSearchParams(window.location.search);
+    document.getElementById("orderId").textContent = q.get("orderID") || "-";
+    document.getElementById("captureId").textContent = q.get("captureID") || "-";
+    document.getElementById("amount").textContent = q.get("amount") || "-";
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoscoop | 물류 업로드</title>
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html"><img src="./logo.png" alt="Zoscoop logo"></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">홈</a></li>
+          <li><a href="./product.html">상품</a></li>
+          <li><a href="./track-order.html">주문 조회</a></li>
+          <li><a class="active" href="./admin-tracking.html">물류 업로드</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container content-card">
+      <h1>물류 정보 업로드 (관리자)</h1>
+      <p>아래 입력값으로 주문 배송 정보를 등록/수정할 수 있습니다.</p>
+      <form id="trackingAdminForm" class="checkout-form">
+        <label for="adminKey">관리자 키</label>
+        <input id="adminKey" type="password" required placeholder="TRACKING_ADMIN_KEY 값">
+
+        <label for="adminOrderId">주문 번호 (Order ID)</label>
+        <input id="adminOrderId" type="text" required placeholder="예: 76L95730FE543591C">
+
+        <label for="adminCarrier">택배사</label>
+        <input id="adminCarrier" type="text" required placeholder="예: CJ 대한통운">
+
+        <label for="adminTrackingNumber">운송장 번호</label>
+        <input id="adminTrackingNumber" type="text" required placeholder="예: 123456789012">
+
+        <label for="adminStatus">배송 상태</label>
+        <select id="adminStatus" required>
+          <option value="배송 준비중">배송 준비중</option>
+          <option value="출고 완료">출고 완료</option>
+          <option value="배송 중">배송 중</option>
+          <option value="배송 완료">배송 완료</option>
+        </select>
+
+        <label for="adminNote">메모 (선택)</label>
+        <textarea id="adminNote" placeholder="예: 4/20 출고 완료"></textarea>
+
+        <button class="btn btn-primary" type="submit">물류 정보 저장</button>
+      </form>
+      <div id="trackingAdminResult" class="tracking-result" hidden></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section><h3>안내</h3><ul><li><a href="./terms.html">이용약관</a></li><li><a href="./privacy.html">개인정보처리방침</a></li></ul></section>
+      <section><h3>고객센터</h3><ul><li><a href="./shipping.html">배송 정책</a></li><li><a href="./returns.html">교환/환불 정책</a></li><li><a href="./payment-tax.html">결제 및 세금</a></li><li><a href="./track-order.html">주문 조회</a></li></ul></section>
+      <section><h3>문의하기</h3><p><a href="mailto:info@zoscoop.com">info@zoscoop.com</a></p></section>
+    </div>
+  </footer>
+
+  <script src="./tracking.js"></script>
+</body>
+</html>

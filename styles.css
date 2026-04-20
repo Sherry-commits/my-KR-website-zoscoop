@@ -444,6 +444,27 @@ h1 {
   resize: vertical;
 }
 
+.tracking-result {
+  margin-top: 14px;
+  border: 1px solid #e7dfd6;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+}
+
+.tracking-result.error {
+  border-color: #f5b2b2;
+  background: #fff6f6;
+}
+
+.tracking-result h3 {
+  margin: 0 0 8px;
+}
+
+.tracking-result p {
+  margin: 6px 0;
+}
+
 .sticky-cta {
   position: fixed;
   bottom: 0;

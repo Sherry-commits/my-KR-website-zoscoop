@@ -120,11 +120,20 @@ async function initPaypalButtons() {
         return createOrder(price);
       },
       onApprove: async (data) => {
-        await captureOrder(data.orderID);
-        setStatus("결제가 완료되었습니다. 감사합니다!");
+        const capture = await captureOrder(data.orderID);
+        const captureId = capture?.purchase_units?.[0]?.payments?.captures?.[0]?.id || "";
+        const params = new URLSearchParams({
+          orderID: data.orderID || "",
+          captureID: captureId,
+          amount: orderPrice ? orderPrice.textContent.trim() : getSelectedPrice(),
+        });
+        window.location.href = `./payment-success.html?${params.toString()}`;
       },
       onError: () => {
-        setStatus("결제 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+        window.location.href = "./payment-failed.html?reason=error";
+      },
+      onCancel: () => {
+        window.location.href = "./payment-failed.html?reason=cancel";
       },
     }).render("#paypal-button-container");
 
