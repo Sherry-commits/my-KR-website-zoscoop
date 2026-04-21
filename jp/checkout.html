@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QJNE753Y3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-2QJNE753Y3');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoscoop | チェックアウト</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="./index.html"><img src="../logo-removebg-preview.png" alt="Zoscoop logo"></a><nav><ul class="nav-links"><li><a href="./index.html">ホーム</a></li><li><a href="./product.html">商品</a></li><li><a class="active" href="./checkout.html">チェックアウト</a></li><li><a href="./contact.html">お問い合わせ</a></li></ul></nav></div></header>
+  <main class="section">
+    <div class="container checkout-shell">
+      <section class="checkout-main">
+        <h1 class="checkout-title">チェックアウト</h1>
+        <div class="checkout-block">
+          <div class="checkout-block-head"><h2>連絡先</h2></div>
+          <form class="checkout-form" id="checkoutForm">
+            <label for="email">メールアドレス</label><input id="email" name="email" type="email" required placeholder="example@email.com">
+            <label for="fullName">氏名</label><input id="fullName" name="fullName" type="text" required placeholder="山田 太郎">
+            <label for="phone">電話番号</label><input id="phone" name="phone" type="tel" required placeholder="+81 90-1234-5678">
+            <label class="inline-check"><input type="checkbox" checked><span>注文・配送に関する通知を受け取る</span></label>
+            <div class="checkout-divider"></div>
+            <h2>配送情報</h2>
+            <label for="country">国 / 地域</label><select id="country" name="country" required></select>
+            <div class="form-row"><div><label for="province">都道府県</label><input id="province" name="province" type="text" required placeholder="東京都"></div><div><label for="city">市区町村</label><input id="city" name="city" type="text" required placeholder="渋谷区"></div></div>
+            <div class="form-row"><div><label for="address1">住所1</label><input id="address1" name="address1" type="text" required placeholder="神南1-1-1"></div><div><label for="address2">住所2</label><input id="address2" name="address2" type="text" placeholder="建物名・部屋番号 (任意)"></div></div>
+            <div class="form-row"><div><label for="postalCode">郵便番号</label><input id="postalCode" name="postalCode" type="text" required placeholder="150-0001"></div><div><label for="pccc">PCCC</label><input id="pccc" name="pccc" type="text" required placeholder="P123456789012"></div></div>
+            <label for="checkoutOrderNote">注文メモ（任意）</label><textarea id="checkoutOrderNote" name="checkoutOrderNote" placeholder="ご要望があればご記入ください"></textarea>
+          </form>
+        </div>
+        <div class="checkout-block paypal-left">
+          <div class="paypal-checkout-brand" aria-label="PayPal"></div>
+          <p class="secure-note">PayPal またはカードでお支払いできます。</p>
+          <p id="paypalStatus" class="secure-note"></p>
+          <div id="paypal-button-container"></div>
+          <div id="paypal-card-button-container"></div>
+        </div>
+      </section>
+      <aside class="checkout-summary"><div class="summary-card"><h2>注文概要</h2><p><strong>商品:</strong> <span id="orderBundle">1 Scoop + 2 Free Gifts</span></p><p><strong>商品金額:</strong> $<span id="orderPrice">35.99</span></p><p><strong>送料:</strong> チェックアウト時に計算</p><p><strong>メモ:</strong> <span id="orderNoteSummary">なし</span></p></div></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><section><h3>ご案内</h3><ul><li><a href="./terms.html">利用規約</a></li><li><a href="./privacy.html">プライバシーポリシー</a></li></ul></section><section><h3>ヘルプセンター</h3><ul><li><a href="./shipping.html">配送ポリシー</a></li><li><a href="./returns.html">返品・返金ポリシー</a></li><li><a href="./payment-tax.html">決済と税金</a></li><li><a href="./track-order.html">注文追跡</a></li></ul></section><section><h3>お問い合わせ</h3><p><a href="mailto:info@zoscoop.com">info@zoscoop.com</a></p></section></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
